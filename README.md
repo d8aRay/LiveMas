@@ -2,26 +2,26 @@
  Taco Bell Optimizer
 
 
-##menu_scrape.py
+## menu_scrape.py
 menu_scrape.py scrapes the taco bell website for the menu prices/calories
 
-###Dependencies: 
+### Dependencies: 
     For Menu Scraping:
         Requests
         bs4
 
-###ToDo
+### ToDo
 missing calories for all items
 
-##live_mas.py        
+## live_mas.py        
 live_mas.py will maximize the total spend due against a budget constraint and
 taxes.  
 
-###Dependencies 
+### Dependencies 
     Pandas
     Pulp
 
-###ToDo
+### ToDo
 user input for budget
 user input for item limit (and work around "no limit")
 add a calorie constraint
