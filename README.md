@@ -28,5 +28,5 @@ taxes.
     -    allow user to prioritize categories and set category dependent item limits
     -add tax dictionary and allow user to input state for tax accuracy. 
     
-##live_mas - solver.xlsx
+## live_mas - solver.xlsx
 live_mas - solver.xlsx is an excel implementation of the optimization
