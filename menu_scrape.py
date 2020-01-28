@@ -28,6 +28,7 @@ menu_pages = ['deals-and-combos'
 products = {}
 for page in menu_pages: 
     print(page)
+    products[page] = {}
     url = taco_bell+page
     menu_request = requests.get(url, headers=headers)
     soup = BeautifulSoup(menu_request.content)
@@ -62,11 +63,13 @@ for page in menu_pages:
         except: 
             calories = '' 
         products[name] = {'price' : price
-                        , 'calories' : calories
+                        , 'calories' : calories.strip()
+                        , 'category' : page
                         }
 import pandas as pd
-live_mas = pd.DataFrame.from_dict(products)
-live_masT = live_mas.T
-live_masT['product'] = live_masT.index
-live_mas = live_masT
+live_mas = pd.DataFrame.from_dict(products, orient = 'index')
+live_mas['product'] = live_mas.index
+#live_masT = live_mas.T
+#live_masT['product'] = live_masT.index
+#live_mas = live_masT
 live_mas.to_csv('live_mas.csv', index=False)
